@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.Model", "Tekin.OA.Model\Tekin.OA.Model.csproj", "{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.BLL", "Tekin.OA.BLL\Tekin.OA.BLL.csproj", "{23EDBD32-9113-447D-B60E-08004834E755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.EFDAL", "Tekin.OA.EFDAL\Tekin.OA.EFDAL.csproj", "{6A15CC12-6866-4467-9F9E-E2B944E84652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.Common", "Tekin.OA.Common\Tekin.OA.Common.csproj", "{09A65E4E-04D1-454B-9211-63A2EF5D9404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UI.Portal", "Tekin.OA.UI.Portal\Tekin.OA.UI.Portal.csproj", "{0E792B47-634B-4735-B279-D3C6287AB3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UI.Portal.Tests", "Tekin.OA.UI.Portal.Tests\Tekin.OA.UI.Portal.Tests.csproj", "{63B67DEC-B9C9-446A-ACC9-C234BE075D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UnitTest", "Tekin.OA.UnitTest\Tekin.OA.UnitTest.csproj", "{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23EDBD32-9113-447D-B60E-08004834E755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23EDBD32-9113-447D-B60E-08004834E755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23EDBD32-9113-447D-B60E-08004834E755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23EDBD32-9113-447D-B60E-08004834E755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A15CC12-6866-4467-9F9E-E2B944E84652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A15CC12-6866-4467-9F9E-E2B944E84652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A15CC12-6866-4467-9F9E-E2B944E84652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A15CC12-6866-4467-9F9E-E2B944E84652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A65E4E-04D1-454B-9211-63A2EF5D9404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A65E4E-04D1-454B-9211-63A2EF5D9404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A65E4E-04D1-454B-9211-63A2EF5D9404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A65E4E-04D1-454B-9211-63A2EF5D9404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
