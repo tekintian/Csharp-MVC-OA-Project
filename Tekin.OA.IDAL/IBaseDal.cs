@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 namespace Tekin.OA.IDAL
 {
     /// <summary>
-    /// 公共接口封装
+    /// 公共接口抽象
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IBaseDal<T> where T : class,new()
