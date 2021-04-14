@@ -47,6 +47,10 @@
       <Project>{09a65e4e-04d1-454b-9211-63a2ef5d9404}</Project>
       <Name>Tekin.OA.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.DALFactory\Tekin.OA.DALFactory.csproj">
+      <Project>{288d3e89-30f6-46e3-8289-2560e5fd0828}</Project>
+      <Name>Tekin.OA.DALFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tekin.OA.EFDAL\Tekin.OA.EFDAL.csproj">
       <Project>{6a15cc12-6866-4467-9f9e-e2b944e84652}</Project>
       <Name>Tekin.OA.EFDAL</Name>
