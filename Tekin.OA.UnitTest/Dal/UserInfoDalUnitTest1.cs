@@ -23,7 +23,7 @@ namespace Tekin.OA.UnitTest.Dal
             {
                 dal.Add(new UserInfo()
                 {
-                    UName = "Lambda"+StrUtils.GetRandStr(8)
+                    UName = "封装"+StrUtils.GetRandStr(8)
                 });
             }
 

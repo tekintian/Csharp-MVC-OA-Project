@@ -9,9 +9,14 @@ namespace Tekin.OA.EFDAL
     public class BaseDal<T> where T:class,new()
     {
         // EF模型实例
-        private DataModelContainer db = new DataModelContainer();
+       // private DataModelContainer db = new DataModelContainer();
+      // DbContext属性
+       public DbContext Db
+       {
+           get { return DbContextFactory.GetDbContextFactory(); }
+       }
 
-        #region 数据查询
+       #region 数据查询
 
         /// <summary>
         /// 泛型查询
@@ -39,12 +44,12 @@ namespace Tekin.OA.EFDAL
             )
         {
             //获取总数量并赋值 total
-            total = db.Set<T>().Where(whereLambda).Count();
+            total = Db.Set<T>().Where(whereLambda).Count();
            
             if (isDesc)
             {
                 //降序排序
-                var list = db.Set<T>().Where(whereLambda)
+                var list = Db.Set<T>().Where(whereLambda)
                     .OrderByDescending<T, B>(orderByLambda)
                     .Skip(pageSize * (curPage - 1))
                     .Take(pageSize)
@@ -55,7 +60,7 @@ namespace Tekin.OA.EFDAL
             else
             {
                 //升序排序
-                var list = db.Set<T>().Where(whereLambda)
+                var list = Db.Set<T>().Where(whereLambda)
                     .OrderBy<T, B>(orderByLambda)
                     .Skip(pageSize * (curPage - 1))
                     .Take(pageSize)
@@ -74,8 +79,8 @@ namespace Tekin.OA.EFDAL
         /// <returns>包含主键ID的T</returns>
         public T Add(T entity)
         {
-            db.Set<T>().Add(entity);
-            db.SaveChanges();
+            Db.Set<T>().Add(entity);
+            Db.SaveChanges();
             return entity;
         }
         /// <summary>
@@ -86,9 +91,9 @@ namespace Tekin.OA.EFDAL
         public bool Update(T entity)
         {
             //如果只是修改某些属性则不需要使用attach,如果是需要整体修改,则需要先attach
-            //db.Set<T>().Attach(entity); 
-            db.Entry(entity).State = EntityState.Modified;
-            return db.SaveChanges() > 0;
+            //Db.Set<T>().Attach(entity); 
+            Db.Entry(entity).State = EntityState.Modified;
+            return Db.SaveChanges() > 0;
         }
         /// <summary>
         /// 删除
@@ -97,8 +102,8 @@ namespace Tekin.OA.EFDAL
         /// <returns>true|false</returns>
         public bool Delete(T entity)
         {
-            db.Entry(entity).State = EntityState.Deleted;
-            return db.SaveChanges() > 0;
+            Db.Entry(entity).State = EntityState.Deleted;
+            return Db.SaveChanges() > 0;
         }
 
         #endregion
