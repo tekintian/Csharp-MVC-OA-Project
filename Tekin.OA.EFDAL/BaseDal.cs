@@ -10,7 +10,7 @@ namespace Tekin.OA.EFDAL
     {
         // EF模型实例
        // private DataModelContainer db = new DataModelContainer();
-      // DbContext属性
+        // DbContext属性  依赖抽象编程 因为基类 DbContext 可以接收不同的实现
        public DbContext Db
        {
            get { return DbContextFactory.GetDbContextFactory(); }
@@ -25,7 +25,7 @@ namespace Tekin.OA.EFDAL
         /// <returns></returns>
         public IQueryable<T> GetEntities(Expression<Func<T,bool>> whereLambda)
         {
-            return db.Set<T>().Where(whereLambda).AsQueryable();
+            return Db.Set<T>().Where(whereLambda).AsQueryable();
         }
 
         /// <summary>
