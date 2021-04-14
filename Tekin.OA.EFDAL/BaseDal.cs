@@ -80,7 +80,7 @@ namespace Tekin.OA.EFDAL
         public T Add(T entity)
         {
             Db.Set<T>().Add(entity);
-            Db.SaveChanges();
+           // Db.SaveChanges();
             return entity;
         }
         /// <summary>
@@ -93,7 +93,8 @@ namespace Tekin.OA.EFDAL
             //如果只是修改某些属性则不需要使用attach,如果是需要整体修改,则需要先attach
             //Db.Set<T>().Attach(entity); 
             Db.Entry(entity).State = EntityState.Modified;
-            return Db.SaveChanges() > 0;
+            //return Db.SaveChanges() > 0;
+            return true;
         }
         /// <summary>
         /// 删除
@@ -103,7 +104,8 @@ namespace Tekin.OA.EFDAL
         public bool Delete(T entity)
         {
             Db.Entry(entity).State = EntityState.Deleted;
-            return Db.SaveChanges() > 0;
+            //return Db.SaveChanges() > 0;
+            return true;
         }
 
         #endregion

@@ -1,6 +1,5 @@
 ﻿using System.Configuration;
 using System.Reflection;
-using Tekin.OA.EFDAL;
 using Tekin.OA.IDAL;
 
 namespace Tekin.OA.DALFactory
@@ -31,3 +30,4 @@ namespace Tekin.OA.DALFactory
         }
     }
 }
+
