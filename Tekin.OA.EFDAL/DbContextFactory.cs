@@ -13,6 +13,7 @@ namespace Tekin.OA.EFDAL
     /// </summary>
     public class DbContextFactory
     {
+        // 利用静态特性 实现一次请求共用一个实例  静态工厂方法
         public static DbContext GetDbContextFactory()
         {
             return new DataModelContainer();
