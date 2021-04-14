@@ -51,6 +51,10 @@
       <Project>{6a15cc12-6866-4467-9f9e-e2b944e84652}</Project>
       <Name>Tekin.OA.EFDAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.IDAL\Tekin.OA.IDAL.csproj">
+      <Project>{525ece13-4f21-4af4-95c0-ed0f9051e2bf}</Project>
+      <Name>Tekin.OA.IDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tekin.OA.Model\Tekin.OA.Model.csproj">
       <Project>{c09cad6f-8d47-419a-b8f1-f2e182183c1a}</Project>
       <Name>Tekin.OA.Model</Name>

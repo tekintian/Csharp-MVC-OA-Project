@@ -6,7 +6,7 @@ namespace Tekin.OA.BLL
     
     public class UserInfoService
     {
-        UserInfoDal userDal = new UserInfoDal();
+        IUserInfoDal userDal = new UserInfoDal();
         //新增
         public UserInfo Add(UserInfo user)
         {
