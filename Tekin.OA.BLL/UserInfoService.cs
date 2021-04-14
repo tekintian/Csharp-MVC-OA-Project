@@ -1,4 +1,5 @@
-﻿using Tekin.OA.EFDAL;
+﻿using Tekin.OA.DALFactory;
+using Tekin.OA.EFDAL;
 using Tekin.OA.IDAL;
 using Tekin.OA.Model;
 using Tekin.OA.NHDAL;
@@ -11,7 +12,7 @@ namespace Tekin.OA.BLL
         //使用接口类来接收 实例   依赖抽象接口编程
        // IUserInfoDal userDal = new UserInfoDal();
 
-        IUserInfoDal userDal = new NhUserInfoDal();
+        IUserInfoDal userDal = StaticDalFactory.GetUserInfoDal();
         //新增
         public UserInfo Add(UserInfo user)
         {
