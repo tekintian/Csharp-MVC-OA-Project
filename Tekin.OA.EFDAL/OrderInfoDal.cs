@@ -8,7 +8,7 @@ using Tekin.OA.Model;
 
 namespace Tekin.OA.EFDAL
 {
-    class OrderInfoDal:BaseDal<OrderInfo>,IOrderInfoDal
+    public class OrderInfoDal:BaseDal<OrderInfo>,IOrderInfoDal
     {
     }
 }
