@@ -1,4 +1,5 @@
 ﻿using Tekin.OA.EFDAL;
+using Tekin.OA.IDAL;
 using Tekin.OA.Model;
 
 namespace Tekin.OA.BLL
@@ -6,7 +7,10 @@ namespace Tekin.OA.BLL
     
     public class UserInfoService
     {
-        IUserInfoDal userDal = new UserInfoDal();
+        //使用接口类来接收 实例   依赖抽象接口编程
+       // IUserInfoDal userDal = new UserInfoDal();
+
+        IUserInfoDal userDal = new NhUserInfoDal();
         //新增
         public UserInfo Add(UserInfo user)
         {
