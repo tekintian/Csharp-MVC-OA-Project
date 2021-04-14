@@ -3,7 +3,7 @@ using Tekin.OA.IDAL;
 
 namespace Tekin.OA.DALFactory
 {
-    public class DbSession
+    public class DbSession : IDbSession
     {
         #region 简单工厂 抽象工厂
 

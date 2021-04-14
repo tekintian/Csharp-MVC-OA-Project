@@ -14,16 +14,16 @@ namespace Tekin.OA.BLL
 
        // IUserInfoDal userDal = StaticDalFactory.GetUserInfoDal();
 
-       private DbSession dbss = new DbSession();
-
-     
+        // private DbSession dbSession = new DbSession();
+      private IDbSession dbSession = DbSessionFactory.GetCurrentDbSession();
+      
        //新增
         public UserInfo Add(UserInfo user)
         {
             //return dbss.UserInfoDal.Add(user);
 
-            dbss.UserInfoDal.Add(user);
-            if (dbss.SaveChanges() > 0)
+            dbSession.UserInfoDal.Add(user);
+            if (dbSession.SaveChanges() > 0)
             {
                 //提交成功
             }
@@ -34,26 +34,26 @@ namespace Tekin.OA.BLL
         {
             //return dbss.UserInfoDal.Update(user);
 
-            dbss.UserInfoDal.Update(user);
+            dbSession.UserInfoDal.Update(user);
 
-            return dbss.SaveChanges()>0;
+            return dbSession.SaveChanges() > 0;
         }
         //删除
         public bool Delete(UserInfo user)
         {
-            //dbss.UserInfoDal.Add(user);
-            //if (dbss.SaveChanges() > 0)
+            //dbSession.UserInfoDal.Add(user);
+            //if (dbSession.SaveChanges() > 0)
             //{
             //  //保存成功  
             //}
 
           //  dbss.UserInfoDal.Update(user);
-            dbss.UserInfoDal.Delete(user);
+          dbSession.UserInfoDal.Delete(user);
 
-            dbss.SaveChanges();// 数据提交的权利有数据访问层提到了业务逻辑层
+          dbSession.SaveChanges();// 数据提交的权利有数据访问层提到了业务逻辑层
             // 单元提交,  UnitWork 单元工作模式 
             // 可实现批量提交
-            return dbss.SaveChanges() > 0;
+          return dbSession.SaveChanges() > 0;
 
             //return dbss.UserInfoDal.Delete(user);
         }
