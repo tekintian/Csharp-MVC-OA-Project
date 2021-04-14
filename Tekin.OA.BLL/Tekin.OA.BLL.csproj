@@ -59,6 +59,10 @@
       <Project>{c09cad6f-8d47-419a-b8f1-f2e182183c1a}</Project>
       <Name>Tekin.OA.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.NHDAL\Tekin.OA.NHDAL.csproj">
+      <Project>{b03eabca-ddc2-4569-bc95-7915cb58aab6}</Project>
+      <Name>Tekin.OA.NHDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
