@@ -61,16 +61,14 @@ namespace Tekin.OA.BLL
 
         public bool Update(T entity)
         {
-            bool isUpdate = CurrentDal.Update(entity);
-            DbSession.SaveChanges();
-           return isUpdate;
+            CurrentDal.Update(entity);
+            return DbSession.SaveChanges()>0;
         }
 
         public bool Delete(T entity)
         {
-            bool isDel = CurrentDal.Delete(entity);
-            DbSession.SaveChanges();
-            return isDel;
+            CurrentDal.Delete(entity);
+            return DbSession.SaveChanges()>0;
         }
 
         #endregion
