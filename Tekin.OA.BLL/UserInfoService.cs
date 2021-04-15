@@ -1,5 +1,6 @@
 ﻿using Tekin.OA.DALFactory;
 using Tekin.OA.EFDAL;
+using Tekin.OA.IBLL;
 using Tekin.OA.IDAL;
 using Tekin.OA.Model;
 using Tekin.OA.NHDAL;
@@ -7,8 +8,13 @@ using Tekin.OA.NHDAL;
 namespace Tekin.OA.BLL
 {
     
-    public class UserInfoService
+    public class UserInfoService:BaseService<UserInfo>, IUserInfoService
     {
+        public override void SetCurrentDal()
+        {
+            this.CurrentDal=this.DbSession.UserInfoDal;
+        }
+/*
         //使用接口类来接收 实例   依赖抽象接口编程
        // IUserInfoDal userDal = new UserInfoDal();
 
@@ -57,5 +63,18 @@ namespace Tekin.OA.BLL
 
             //return dbss.UserInfoDal.Delete(user);
         }
+
+
+        #region IBaseService<UserInfo> 成员
+
+        public System.Linq.IQueryable<UserInfo> GetEntities(System.Linq.Expressions.Expression<System.Func<UserInfo, bool>> whereLambda)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+ */
+
+
     }
 }

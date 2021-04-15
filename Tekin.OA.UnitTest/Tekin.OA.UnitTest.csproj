@@ -70,21 +70,34 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tekin.OA.BLL\Tekin.OA.BLL.csproj">
+      <Project>{23edbd32-9113-447d-b60e-08004834e755}</Project>
+      <Name>Tekin.OA.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tekin.OA.Common\Tekin.OA.Common.csproj">
       <Project>{09a65e4e-04d1-454b-9211-63a2ef5d9404}</Project>
       <Name>Tekin.OA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.DALFactory\Tekin.OA.DALFactory.csproj">
+      <Project>{288d3e89-30f6-46e3-8289-2560e5fd0828}</Project>
+      <Name>Tekin.OA.DALFactory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tekin.OA.EFDAL\Tekin.OA.EFDAL.csproj">
       <Project>{6A15CC12-6866-4467-9F9E-E2B944E84652}</Project>
       <Name>Tekin.OA.EFDAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.IBLL\Tekin.OA.IBLL.csproj">
+      <Project>{3649ebfc-8f6a-4d1e-b592-d0c7958e0a5d}</Project>
+      <Name>Tekin.OA.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tekin.OA.IDAL\Tekin.OA.IDAL.csproj">
+      <Project>{525ece13-4f21-4af4-95c0-ed0f9051e2bf}</Project>
+      <Name>Tekin.OA.IDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tekin.OA.Model\Tekin.OA.Model.csproj">
       <Project>{C09CAD6F-8D47-419A-B8F1-F2E182183C1A}</Project>
       <Name>Tekin.OA.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

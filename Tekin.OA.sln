@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.Common", "Tekin.OA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UI.Portal", "Tekin.OA.UI.Portal\Tekin.OA.UI.Portal.csproj", "{0E792B47-634B-4735-B279-D3C6287AB3CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UI.Portal.Tests", "Tekin.OA.UI.Portal.Tests\Tekin.OA.UI.Portal.Tests.csproj", "{63B67DEC-B9C9-446A-ACC9-C234BE075D87}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.UnitTest", "Tekin.OA.UnitTest\Tekin.OA.UnitTest.csproj", "{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.IDAL", "Tekin.OA.IDAL\Tekin.OA.IDAL.csproj", "{525ECE13-4F21-4AF4-95C0-ED0F9051E2BF}"
@@ -22,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.NHDAL", "Tekin.OA.NHDAL\Tekin.OA.NHDAL.csproj", "{B03EABCA-DDC2-4569-BC95-7915CB58AAB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.DALFactory", "Tekin.OA.DALFactory\Tekin.OA.DALFactory.csproj", "{288D3E89-30F6-46E3-8289-2560E5FD0828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekin.OA.IBLL", "Tekin.OA.IBLL\Tekin.OA.IBLL.csproj", "{3649EBFC-8F6A-4D1E-B592-D0C7958E0A5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +49,6 @@ Global
 		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E792B47-634B-4735-B279-D3C6287AB3CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63B67DEC-B9C9-446A-ACC9-C234BE075D87}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26DC5629-CC44-4AC4-AB99-D9CD6A29A08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{288D3E89-30F6-46E3-8289-2560E5FD0828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{288D3E89-30F6-46E3-8289-2560E5FD0828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{288D3E89-30F6-46E3-8289-2560E5FD0828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3649EBFC-8F6A-4D1E-B592-D0C7958E0A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3649EBFC-8F6A-4D1E-B592-D0C7958E0A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3649EBFC-8F6A-4D1E-B592-D0C7958E0A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3649EBFC-8F6A-4D1E-B592-D0C7958E0A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
