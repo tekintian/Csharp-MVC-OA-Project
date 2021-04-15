@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using Tekin.OA.BLL;
@@ -28,7 +29,8 @@ namespace Tekin.OA.UI.Portal.Controllers
         public void Create(UserInfo user)
         {
             userInfoService.Add(user);
-            Response.Redirect(Url.Action("Index", "UserInfo"));
+
+            RedirectToAction("Index","UserInfo");
         }
         public ActionResult Edit(int Id)
         {
@@ -46,6 +48,22 @@ namespace Tekin.OA.UI.Portal.Controllers
         public ActionResult Details(int Id)
         {
             ViewData.Model = userInfoService.GetEntities(u => u.Id == Id).FirstOrDefault();
+            return View();
+        }
+
+        public ActionResult Delete(int id)
+        {
+            if (Request.HttpMethod.Equals("POST"))
+            {
+                UserInfo user = new UserInfo() { Id = id, UName = "" };
+                userInfoService.Delete(user);
+                Response.Redirect(Url.Action("Index", "UserInfo"));
+            }
+            else
+            {
+                ViewData.Model = userInfoService.GetEntities(u => u.Id == id).FirstOrDefault();
+                
+            }
             return View();
         }
     }
