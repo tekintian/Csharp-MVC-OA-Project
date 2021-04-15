@@ -16,7 +16,11 @@ namespace Tekin.OA.BLL
         //子类需要调这里的方法,必须先给这个属性赋值
         public IBaseDal<T> CurrentDal { get; set; }
         protected IDbSession DbSession {
-            get { return Tekin.OA.DALFactory.DbSessionFactory.GetCurrentDbSession(); }
+            get
+            {
+               var csses= Tekin.OA.DALFactory.DbSessionFactory.GetCurrentDbSession();
+               return csses;
+            }
         }
 
         //基类的构造函数

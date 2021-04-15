@@ -20,14 +20,17 @@ namespace Tekin.OA.DALFactory
             //return new UserInfoDal();
 
             //先从缓存中获取对象,没有在执行反射获取
-            IUserInfoDal  userInfoDal = HttpRuntime.Cache.Get("userInfoDal") as IUserInfoDal;
+            IUserInfoDal userInfoDal = HttpRuntime.Cache.Get("UserInfoDal") as IUserInfoDal;
             if (userInfoDal==null)
             {
                 //使用反射的方式获取对象 
                 // 在UI 修改配置文件的实例程序集名称
-                userInfoDal =  Assembly.Load(assemblyName).CreateInstance("UserInfoDal") as IUserInfoDal;
+                var assDal = Assembly.Load(assemblyName).CreateInstance(assemblyName+".UserInfoDal");
+
+                userInfoDal = assDal as IUserInfoDal;
+                
                 //把userInfoDal对象保存到缓存中
-                HttpRuntime.Cache.Insert("userInfoDal", userInfoDal);
+                HttpRuntime.Cache.Insert("UserInfoDal", userInfoDal);
             }
            
             return userInfoDal;
@@ -38,7 +41,7 @@ namespace Tekin.OA.DALFactory
             IOrderInfoDal orderInfoDal = HttpRuntime.Cache.Get("orderInfoDal") as IOrderInfoDal;
             if (orderInfoDal ==null)
             {
-                orderInfoDal =  Assembly.Load(assemblyName).CreateInstance("IOrderInfoDal") as IOrderInfoDal;
+                orderInfoDal =  Assembly.Load(assemblyName).CreateInstance(assemblyName+".IOrderInfoDal") as IOrderInfoDal;
             }
 
             return orderInfoDal;
